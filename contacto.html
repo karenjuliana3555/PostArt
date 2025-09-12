@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto Gmail</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Estilos del ícono */
+    .gmail-icon {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .gmail-icon:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    }
+
+    .gmail-icon img {
+      width: 40px;
+    }
+
+    /* Formulario oculto */
+    .form-container {
+      display: none;
+      margin-top: 20px;
+      padding: 20px;
+      max-width: 400px;
+      border-radius: 10px;
+      background: #f9f9f9;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .form-container input,
+    .form-container textarea {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .form-container button {
+      background: #ea4335;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .form-container button:hover {
+      background: #c23321;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ícono de Gmail -->
+  <div class="gmail-icon" onclick="mostrarFormulario()">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Gmail">
+  </div>
+
+  <!-- Formulario oculto -->
+  <div id="formulario" class="form-container">
+    <h2>Envíame un mensaje</h2>
+    <form action="https://formsubmit.co/postart71@gmail.com" method="POST">
+      <input type="text" name="nombre" placeholder="Tu nombre" required>
+      <input type="email" name="email" placeholder="Tu correo" required>
+      <textarea name="mensaje" rows="5" placeholder="Tu mensaje" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+
+  <script>
+    function mostrarFormulario() {
+      const form = document.getElementById("formulario");
+      form.style.display = form.style.display === "block" ? "none" : "block";
+    }
+  </script>
+
+</body>
+</html>
